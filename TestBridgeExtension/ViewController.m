@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "TestBridgeExtension-Swift.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextField *inputTextField;
+@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 
 @end
 
@@ -22,6 +26,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)sorting:(UIButton *)sender {
+    self.resultLabel.text = [NSString sortedChar:self.inputTextField.text];
 }
 
 @end

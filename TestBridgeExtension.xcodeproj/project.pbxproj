@@ -13,6 +13,7 @@
 		D835555E1D6C08940048363A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D835555C1D6C08940048363A /* Main.storyboard */; };
 		D83555601D6C08940048363A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D835555F1D6C08940048363A /* Assets.xcassets */; };
 		D83555631D6C08940048363A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D83555611D6C08940048363A /* LaunchScreen.storyboard */; };
+		D835556C1D6C09510048363A /* NSString+SortedChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D835556B1D6C09510048363A /* NSString+SortedChar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		D835555F1D6C08940048363A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D83555621D6C08940048363A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D83555641D6C08940048363A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D835556A1D6C09500048363A /* TestBridgeExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestBridgeExtension-Bridging-Header.h"; sourceTree = "<group>"; };
+		D835556B1D6C09510048363A /* NSString+SortedChar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+SortedChar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				D83555611D6C08940048363A /* LaunchScreen.storyboard */,
 				D83555641D6C08940048363A /* Info.plist */,
 				D83555531D6C08940048363A /* Supporting Files */,
+				D835556B1D6C09510048363A /* NSString+SortedChar.swift */,
+				D835556A1D6C09500048363A /* TestBridgeExtension-Bridging-Header.h */,
 			);
 			path = TestBridgeExtension;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D835555B1D6C08940048363A /* ViewController.m in Sources */,
+				D835556C1D6C09510048363A /* NSString+SortedChar.swift in Sources */,
 				D83555581D6C08940048363A /* AppDelegate.m in Sources */,
 				D83555551D6C08940048363A /* main.m in Sources */,
 			);
@@ -264,10 +270,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TestBridgeExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.supakit.TestBridgeExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestBridgeExtension/TestBridgeExtension-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -275,10 +284,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TestBridgeExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.supakit.TestBridgeExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestBridgeExtension/TestBridgeExtension-Bridging-Header.h";
 			};
 			name = Release;
 		};
